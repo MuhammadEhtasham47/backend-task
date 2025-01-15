@@ -25,7 +25,7 @@ export class UserService {
     return this.userModel.findById(id).exec();
   }
 
-  async verifyToken(authHeader: string): Promise<any> {
+  async verifyToken(authHeader: string): Promise<User | null> {
     if (!authHeader || !authHeader.startsWith('Bearer ')) {
       throw new Error('Invalid token');
     }

@@ -105,6 +105,7 @@ JWT_SECRET=your_jwt_secret
 REDIS_HOST=
 REDIS_PORT=
 REDIS_PASSWORD=
+SECRET=
 
 Run Redis server or ensure it's accessible at the specified host and port.
 
