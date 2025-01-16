@@ -31,7 +31,7 @@ export class UserService {
     }
     const token = authHeader.split(' ')[1];
     try {
-      const decoded = this.jwtService.verify(token, { secret: 'yourSecretKey' });
+      const decoded = this.jwtService.verify(token, { secret: process.env.SECRET });
       const user = await this.getUserById(decoded.id);
       if (!user) {
         throw new Error('Unauthorized');

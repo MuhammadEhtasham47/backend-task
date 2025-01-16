@@ -12,8 +12,8 @@ export class TaskService {
       this.redisClient = new Redis({
         host: process.env.HOST,
         port: 14093,
-        password: process.env.REDIS_PASS, // Replace with your actual Redis password
-      }); // Connects to Redis on localhost:6379 by default
+        password: process.env.REDIS_PASS, 
+      });
     }
   
     private async getCache(key: string): Promise<any | null> {

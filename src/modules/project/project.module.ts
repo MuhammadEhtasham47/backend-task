@@ -14,7 +14,7 @@ import { User, UserSchema } from '../user/user.schema';
       { name: User.name, schema: UserSchema },
     ]),
     JwtModule.register({
-      secret: 'yourSecretKey', // Replace with an environment variable
+      secret: process.env.SECRET, 
       signOptions: { expiresIn: '1h' },
     }),
   ],
