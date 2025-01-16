@@ -76,7 +76,7 @@ Overdue Tasks Summary: GET /api/v1/tasks/overdue
 
 Lists overdue tasks grouped by project.
 
-Uses Redis caching.
+Uses Redis caching. But to implement the update of redis you can setup the endpoint of create tasks and can delete existing cache and create new one or can update the cache as of your logic.
 
 Project Task Summary: GET /api/v1/tasks/project-summary/:projectId
 
